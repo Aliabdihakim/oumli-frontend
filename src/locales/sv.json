@@ -1,0 +1,90 @@
+{
+  "main": {
+    "oumli": "Oumli",
+    "foodBoxes": "Matlådor",
+    "giftCard": "Presentkort",
+    "aboutUs": "Om oss",
+    "faq": "FAQ",
+    "buy": "Köp",
+    "numberOfBoxes": "Antal matlådor",
+    "add": "Lägg till",
+    "product": "Produkt",
+    "price": "Pris",
+    "amount": "Antal",
+    "totalPrice": "Total pris",
+    "unit": "SEK",
+    "toCheckout": "Till kassa",
+    "promoCode": "Rabattkod",
+    "apply": "Tillämpa",
+    "contact": "Kontakt",
+    "oumli.email": "info@oumli.com",
+    "copyright": "Ⓒ",
+    "menu": "Meny",
+    "showAllProducts": "Visa alla produkter",
+    "usualQuestions": "Vanliga frågor",
+    "email": "Email",
+    "password": "Lösenord",
+    "login": "Logga in",
+    "name": "Namn"
+  },
+  "button": {
+    "buyFoodBoxes": "Köp matlådor",
+    "showProduct": "Visa produkt"
+  },
+  "hero": {
+    "header": "Vi gör livet enklare för nya mammor",
+    "text": "Ge din kropp näring och vila efter förlossning. Matlådorleverans för nyblivna mammor och föräldrar."
+  },
+  "banner": {
+    "freeDelivery": "Gratis Leverans",
+    "trustpilot": "Utmärkt på Trustpilot",
+    "order": "Vid beställningar över 500kr eller mer",
+    "reviews": "Baserat på 53 recensioner",
+    "satisfaction": "Om du inte är nöjd",
+    "nutritiousMeals.title": "Levererar näringsrika måltider för att stödja nyblivna mammor och föräldrar",
+    "nutritiousMeals.text": "Efter förlossningen spelar maten en avgörande roll i en mammas eller födande persons läkningsprocess. Vad din kropp behöver nu skiljer sig från vad din kropp behövde före födseln och till och med före graviditeten. Genom att äta bra för näring efter förlossningen, kan du få bättre stöd för att återhämta dig snabbare, trivas efter förlossningen och uppleva glädjen med ett tidigt moderskap.",
+    "collab.first.title": "Skapad av mammor som har upplevt matens helande kraft",
+    "collab.first.text": "Skapad av mammor som har upplevt matens helande kraft",
+    "collab.second.title": "Mat packat med näring,  historia och fantastiska smaker",
+    "collab.second.text": "Vårt uppdrag är att ge näring åt kvinnor efter förlossningen. Vi lagar och levererar näringsrikt utformade måltider för att stödja kvinnor för att återhämtas efter förlossningen. Fullpackade med näringsämnen och mineraler som är viktiga för kroppen efter förlossningen, stödjer våra måltider fysisk återhämtning, hormonell balans och känslomässig hälsa, och, om du väljer att amma, tillgången och kvaliteten på mjölk.",
+    "yalla.rinkeby": "Yalla Rinkeby",
+    "boxBanner.title": "Ge din kropp näring. Återhämta dig efter förlossningen"
+  },
+  "products": {
+    "description": "Tillverkad med ingredienser av högsta kvalitet, bl.a ekologiska produkter och gräsmatade djur"
+  },
+  "cart": {
+    "cart": "Varukorg",
+    "numberOfItems": "{{count}} produkter i din varukorg"
+  },
+  "errors": {
+    "fetchReviews": "Failed to load reviews. Please try again later.",
+    "fetchproducts": "Failed to load products. Please try again later."
+  },
+  "reviews": {
+    "header": "Älskad av mammor och föräldrar"
+  },
+  "footer": {
+    "description": "Oumli lagar och levererar måltider för att ge näring till nyblivna mödrar och föräldrar efter förlossningen, och hjälpa dem att återhämta sig och må bra."
+  },
+  "giftCard": {
+    "perfectGift.title": "Den perfekta gåvan för nya mammor",
+    "perfectGift.text": "Ett Oumli presentkort är ett enkelt sätt att ge dina vänner och nära och kära ökad energi, bättre humör, mer fritid, mindre stress och en kropp som återhämtar sig snabbt och känns fantastiskt.",
+    "faq.q1": "Är presentkort fysiska eller digitala?",
+    "faq.q2": "Förfaller presentkortet?",
+    "faq.q3": "Kan jag skicka presentkortet till någon annan?",
+    "faq.a1": "Presentkorten är fysiska.",
+    "faq.a2": "Nej, våra presentkort har inget sista giltighetsdatum.",
+    "faq.a3": "Absolut! När du väljer kort att köpa kan du fylla in adressen du vill att presntkortet ska skicas till. Skriver du inte in något skicka vi till betalningsadressen."
+  },
+  "login": {
+    "welcomeBack": "Välkommen tillbaka!",
+    "missingAccount": "Saknar du konto? Registrera dig",
+    "underlineHere": "här"
+  },
+  "register": {
+    "createAccount": "Skapa ett konto!",
+    "create": "Skapa konto",
+    "haveAccount": "Har du redan ett konto?"
+  }
+}
