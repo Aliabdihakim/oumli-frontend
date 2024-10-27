@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 
 const Profile = () => {
   const { t } = useTranslation();
-  const { data, isLoading, isError } = useGetUserDetails();
+  const { data } = useGetUserDetails();
 
   console.log({ data });
 
