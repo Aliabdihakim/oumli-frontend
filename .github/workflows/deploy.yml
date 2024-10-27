@@ -3,7 +3,7 @@ name: Deploy to S3
 on:
   push:
     branches:
-      - main # Deploys only when code is pushed to the main branch
+      - main
 
 jobs:
   deploy:
@@ -16,7 +16,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "18" # Make sure this matches your project's Node version
+          node-version: "18"
 
       - name: Install dependencies
         run: npm install

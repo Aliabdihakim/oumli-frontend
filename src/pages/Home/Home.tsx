@@ -11,7 +11,7 @@ const Home = () => {
     <>
       <div className="bg-light-brown py-20">
         <Hero />
-        Hi
+        Tesing
       </div>
       <div className="border-b-2">
         <FirstBanner />
