@@ -1,13 +1,13 @@
 import useGetSingleProduct from "@/api/getSingleProduct";
 import { Description } from "@/components/design-systems/Description";
 import { PageWrapper } from "@/components/design-systems/PageWrapper";
-import Spinner from "@/components/design-systems/Spinner/Spinner";
 import { addToCart } from "@/redux/slices/cartSlice";
 import { useTranslation } from "react-i18next";
 import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 import Products from "@/components/Products/Products";
+import { Loading } from "@/components/design-systems/Loading";
 
 type FormData = {
   quantity: number;
@@ -24,8 +24,13 @@ const Product = () => {
     defaultValues: { quantity: 1 },
   });
 
-  if (isLoading) return <Spinner size={50} color="#A86C64s" />;
-  if (isError || !data) return <p>Error fetching products</p>;
+  if (isLoading) {
+    return <Loading />;
+  }
+
+  if (isError || !data) {
+    return <p>Error fetching products</p>;
+  }
 
   const onSubmit = (formData: FormData) => {
     console.log({

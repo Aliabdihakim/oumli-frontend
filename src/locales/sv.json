@@ -78,7 +78,7 @@
     "faq.a3": "Absolut! När du väljer kort att köpa kan du fylla in adressen du vill att presntkortet ska skicas till. Skriver du inte in något skicka vi till betalningsadressen."
   },
   "login": {
-    "welcomeBack": "Välkommen tillbaka!",
+    "welcomeBack": "Välkommen tillbaka {{name}}!",
     "missingAccount": "Saknar du konto? Registrera dig",
     "underlineHere": "här"
   },

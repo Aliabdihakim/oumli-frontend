@@ -14,7 +14,7 @@ const OrderSchema = z.object({
   status: z.string().optional(),
   createdat: z.string().datetime().optional(),
   updatedat: z.string().datetime().optional(),
-  order_items: z.array(OrderItemSchema),
+  order_items: z.array(OrderItemSchema).optional().default([]),
 });
 
 const UserSchema = z.object({
@@ -28,6 +28,7 @@ const UserSchema = z.object({
 
 const GetUserResponseSchema = z.object({
   status: z.string(),
+  message: z.string(),
   data: UserSchema,
 });
 

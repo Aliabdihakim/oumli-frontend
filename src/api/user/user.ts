@@ -18,8 +18,13 @@ const getUserDetails = async (): Promise<User> => {
     throw new Error("Failed to fetch user details");
   }
 
-  const result: GetUserResponse = await response.json();
-  return GetUserResponseSchema.parse(result).data;
+  try {
+    const result: GetUserResponse = await response.json();
+    return GetUserResponseSchema.parse(result).data;
+  } catch (error) {
+    console.error("Schema parsing error:", error);
+    throw new Error("Failed to parse user response");
+  }
 };
 
 const useGetUserDetails = () => {

@@ -11,6 +11,8 @@ import Login from "@/pages/Login/Login";
 import Register from "@/pages/Register/Register";
 import Profile from "@/pages/Profile/Profile";
 import ProtectedRoute from "./ProtectedRoute";
+import UserInfo from "@/pages/UserInfo/UserInfo";
+import Orders from "@/pages/Orders/Orders";
 
 const Routers = () => {
   return (
@@ -32,7 +34,24 @@ const Routers = () => {
               <Profile />
             </ProtectedRoute>
           }
-        />
+        >
+          <Route
+            path="user"
+            element={
+              <ProtectedRoute>
+                <UserInfo />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="orders"
+            element={
+              <ProtectedRoute>
+                <Orders />
+              </ProtectedRoute>
+            }
+          />
+        </Route>
       </Routes>
     </Layout>
   );

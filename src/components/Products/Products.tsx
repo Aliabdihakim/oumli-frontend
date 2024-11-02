@@ -1,10 +1,10 @@
 import useGetProducts from "@/api/getProducts";
 import { PageWrapper } from "../design-systems/PageWrapper";
-import Spinner from "../design-systems/Spinner/Spinner";
 import { Button } from "../design-systems/Button";
 import { useTranslation } from "react-i18next";
 import { Description } from "../design-systems/Description";
 import { Link } from "react-router-dom";
+import { Loading } from "../design-systems/Loading";
 
 type ProductsProps = {
   limit?: number;
@@ -15,7 +15,10 @@ const Products = ({ limit, columns = 2 }: ProductsProps) => {
   const { t } = useTranslation();
   const { data, isLoading, isError } = useGetProducts();
 
-  if (isLoading) return <Spinner size={50} color="#A86C64s" />;
+  if (isLoading) {
+    return <Loading />;
+  }
+
   if (isError || !data) {
     return <p>{t("errors.fetchProducts")}</p>;
   }

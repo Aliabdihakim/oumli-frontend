@@ -1,14 +1,16 @@
 import useGetReviews from "@/api/getReviews";
 import { PageWrapper } from "../design-systems/PageWrapper";
 import ReviewCard from "./components/ReviewCard";
-import { Spinner } from "phosphor-react";
 import { useTranslation } from "react-i18next";
+import { Loading } from "../design-systems/Loading";
 
 const Reviews = () => {
   const { t } = useTranslation();
   const { data, isLoading, isError } = useGetReviews();
 
-  if (isLoading) return <Spinner size={50} color="#A86C64s" />;
+  if (isLoading) {
+    return <Loading />;
+  }
 
   if (isError || !data) {
     return <p>{t("errors.fetchReviews")}</p>;
