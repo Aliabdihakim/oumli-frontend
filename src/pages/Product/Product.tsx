@@ -3,7 +3,7 @@ import { Description } from "@/components/design-systems/Description";
 import { PageWrapper } from "@/components/design-systems/PageWrapper";
 import { addToCart } from "@/redux/slices/cartSlice";
 import { useTranslation } from "react-i18next";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 import { Loading } from "@/components/design-systems/Loading";
@@ -22,11 +22,7 @@ const Product = () => {
   const navigate = useNavigate();
   const productId = id ? parseInt(id, 10) : NaN;
   const { data, isLoading, isError } = useGetSingleProduct(productId);
-  const {
-    data: products,
-    isLoading: productsIsLoading,
-    isError: productsIsError,
-  } = useGetProducts();
+  const { data: products, isLoading: productsIsLoading } = useGetProducts();
 
   const dispatch = useDispatch();
 
