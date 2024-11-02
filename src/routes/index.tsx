@@ -13,6 +13,7 @@ import Profile from "@/pages/Profile/Profile";
 import ProtectedRoute from "./ProtectedRoute";
 import UserInfo from "@/pages/UserInfo/UserInfo";
 import Orders from "@/pages/Orders/Orders";
+import FAQ from "@/pages/FAQ/FAQ";
 
 const Routers = () => {
   return (
@@ -22,6 +23,7 @@ const Routers = () => {
         <Route path="/products" element={<Products />} />
         <Route path="/gift-cards" element={<GiftCard />} />
         <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/faq" element={<FAQ />} />
         <Route path="/product/:id" element={<Product />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />

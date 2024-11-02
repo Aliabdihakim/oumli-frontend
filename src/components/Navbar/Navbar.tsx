@@ -21,7 +21,7 @@ const Navbar = () => {
   const navLinks = [
     { name: t("main.foodBoxes"), path: "/products" },
     { name: t("main.giftCard"), path: "/gift-cards" },
-    { name: t("main.aboutUs"), path: "/about-us" },
+    // { name: t("main.aboutUs"), path: "/about-us" },
     { name: t("main.faq"), path: "/faq" },
   ];
 

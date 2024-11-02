@@ -86,5 +86,15 @@
     "createAccount": "Skapa ett konto!",
     "create": "Skapa konto",
     "haveAccount": "Har du redan ett konto?"
+  },
+  "faq": {
+    "q1": "Är måltiderna färska eller frysta?",
+    "a1": "Vi erbjuder färska måltider som är klara att äta eller som enkelt kan värmas upp för att göra det så bekvämt som möjligt.",
+    "q2": "Levererar ni över hela landet?",
+    "a2": "Nej tyvärr. För tillfället leverar vi endast till Stockholm, Uppsala och Västerås",
+    "q3": "Hur lång tid tar det att få leveransen efter beställning?",
+    "a3": "Normalt tar det 3-5 dagar att få leveransen efter att du har gjort din beställning.",
+    "q4": "Vad gör jag om jag har allergier?",
+    "a4": "Vi har tydliga märkningar på alla våra måltider och erbjuder anpassningar för vanliga allergier. Se till att specificera dina allergier när du gör din beställning, så ser vi till att leverera säkra alternativ."
   }
 }

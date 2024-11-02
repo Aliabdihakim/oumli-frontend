@@ -4,10 +4,17 @@ import clsx from "clsx";
 import { Package } from "phosphor-react";
 import { useTranslation } from "react-i18next";
 import { Link, Outlet, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
   const { t } = useTranslation();
   const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    navigate("/profile/orders");
+  }, [navigate]);
 
   const storedUser = JSON.parse(localStorage.getItem("user") || "null");
   console.log("Stored user from localStorage:", storedUser);

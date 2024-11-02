@@ -3,28 +3,38 @@ import { Description } from "@/components/design-systems/Description";
 import { PageWrapper } from "@/components/design-systems/PageWrapper";
 import { addToCart } from "@/redux/slices/cartSlice";
 import { useTranslation } from "react-i18next";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
-import Products from "@/components/Products/Products";
 import { Loading } from "@/components/design-systems/Loading";
+import useGetProducts from "@/api/getProducts";
+import { Button } from "@/components/design-systems/Button";
+import { useNavigate } from "react-router-dom";
 
 type FormData = {
   quantity: number;
 };
 
+// Inside the Product component
 const Product = () => {
   const { t } = useTranslation();
   const { id } = useParams<{ id: string }>()!;
+  const navigate = useNavigate();
   const productId = id ? parseInt(id, 10) : NaN;
   const { data, isLoading, isError } = useGetSingleProduct(productId);
+  const {
+    data: products,
+    isLoading: productsIsLoading,
+    isError: productsIsError,
+  } = useGetProducts();
+
   const dispatch = useDispatch();
 
   const { register, handleSubmit } = useForm<FormData>({
     defaultValues: { quantity: 1 },
   });
 
-  if (isLoading) {
+  if (isLoading || productsIsLoading) {
     return <Loading />;
   }
 
@@ -92,7 +102,30 @@ const Product = () => {
             </form>
           </div>
         </div>
-        <Products columns={4} />
+        <div className={`grid grid-cols-1 md:grid-cols-4 gap-16 pt-20`}>
+          {products?.map((product) => (
+            <div
+              key={product.id}
+              className="flex flex-col items-center justify-between"
+            >
+              <button onClick={() => navigate(`/product/${product.id}`)}>
+                <img src={product.image} alt={`img-${product.name}`} />
+              </button>
+              <h2 className="text-xl font-semibold text-brown-primary py-4">
+                {product.name}
+              </h2>
+
+              <a href={`/product/${product.id}`}>
+                <Button
+                  variant="secondary"
+                  onClick={() => navigate(`/product/${product.id}`)}
+                >
+                  {t("button.showProduct")}
+                </Button>
+              </a>
+            </div>
+          ))}
+        </div>
       </PageWrapper>
     </div>
   );
